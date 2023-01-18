@@ -1,7 +1,7 @@
 local ICON_SIZE = 32
 
 function ProjectileBase:_check_create_marker()
-	if not self._range then
+	if not self._range or not self._damage or self._damage < 1 then
 		return
 	end
 
